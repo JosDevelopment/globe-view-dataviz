@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Garaje Code Pills - D3js</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Interactive Rotating Globe</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">  
 </head>
-
 <body>
+    <!-- Node Edit Modal (same as Code A) -->
+    <div id="nodeEditModal" class="modal">
+        <div class="modal-content">
+            <h3>Edit Country</h3>
+            <input type="text" id="editNodeNameInput" placeholder="Country Name" />
+            <textarea id="editNodeContentInput" placeholder="Country Content"></textarea>
+            <select id="editNodeCategoryInput">
+                <option value="">Select Category</option>
+                <option value="Default">Default</option>
+                <option value="Europe">Europe</option>
+                <option value="America">America</option>
+                <option value="Asia">Asia</option>
+            </select>
+            <div class="modal-buttons">
+                <button class="cancel" onclick="closeModal()">Cancel</button>
+                <button class="confirm" onclick="saveNodeChanges()">Save</button>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <div id="info-panel">Click countries to create connections</div>
+
     <script src="js/app.js"></script>
 </body>
-
 </html>
