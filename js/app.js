@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle mouse events
     const handleMouseOver = (event, d) => {
         d3.select(event.target)
-            .attr("fill", "#3498db");
+            .attr("fill", "#006");
     };
 
     const handleMouseOut = (event) => {
